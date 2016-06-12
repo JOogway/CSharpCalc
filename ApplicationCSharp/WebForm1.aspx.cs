@@ -159,6 +159,10 @@ namespace ApplicationCSharp
                     }
                     else if ((string)ViewState["Operation"] == "Division")
                     {
+                        if (Convert.ToInt32(ViewState["x2"])==0)
+                        {
+                            Response.Write("<script>alert('Nie dziel przez 0!')</script>");
+                        }
                         numberdisplay.Text = _Calculate.Division(Convert.ToInt32(ViewState["x1"]), Convert.ToInt32(ViewState["x2"])).ToString();
                     }
                     else Response.Write("<script>alert('Brak wybranej operacji')</script>");

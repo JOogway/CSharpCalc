@@ -9,19 +9,27 @@ namespace ApplicationCSharp
     {
         public int Addition(int x1, int x2)
         {
-            return x1+x2;
+            return x1 + x2;
         }
+
         public int Subtraction(int x1, int x2)
         {
-            return x1-x2;
+            return x1 - x2;
         }
+
         public int Multiply(int x1, int x2)
         {
             return x1*x2;
         }
+
         public double Division(int x1, int x2)
         {
-            return x1/x2;
+            if (x2 == 0)
+            {
+                x2 = 1;
+            }
+             return x1/x2;
+            
         }
     }
 }
